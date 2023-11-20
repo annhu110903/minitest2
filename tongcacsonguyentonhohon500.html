@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function SNT(n) {
+        if (n < 2) {
+            return  false;
+        } else if (n > 3) {
+            for (let j = 2; j < n; j++) {
+                if (n % j === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    let total = 0;
+    for (let i = 0; i < 500; i++) {
+        if (SNT(i)) {
+            total += i;
+        }
+    }
+    document.write("Tổng của các số nguyên tố nhỏ hơn 500: " + total)
+</script>
+</body>
+</html>
