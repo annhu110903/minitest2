@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 4, 4, 5, 6, 7, 8, 1]
+    function SNT(n) {
+            if (n < 2) {
+                 return  false;
+             } else if (n > 3) {
+                 for (let j = 2; j < n; j++) {
+                     if (n % j === 0) {
+                         return false;
+                     }
+                 }
+             }
+                 return true;
+             }
+     let total = 0
+     for (let i = 0; i < arr3.length; i++) {
+         if (SNT(i)) {
+         total += Number(i)
+         }
+     }
+     document.write("Tổng các số nguyên tố trong dãy là " + total)
+</script>
+</body>
+</html>
